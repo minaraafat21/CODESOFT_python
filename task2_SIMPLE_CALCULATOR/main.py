@@ -9,6 +9,7 @@ def change_label_text(new_text):
 def clear_label_text():
     label1.config(text="")
     label2.config(text="")
+    label2.config(font=("Arial", 28))
 
 
 def myEval(expression):
@@ -17,6 +18,7 @@ def myEval(expression):
         label2.config(text=result)
     except Exception as e:
         label2.config(text=" ERROR: " + str(e))
+        label2.config(font=("Arial", 16))
 
 
 root = tk.Tk()
@@ -40,7 +42,7 @@ label3.grid(row=0, column=0, rowspan=3)
 
 
 
-# Create buttons and shift them down by 4 rows
+
 button1 = Button(root, text="1", width=5, height=3, bg=myGrey, fg=myBlue, command=lambda: change_label_text("1"))
 button1.grid(row=9, column=0)
 
